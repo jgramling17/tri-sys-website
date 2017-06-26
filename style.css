@@ -1,0 +1,382 @@
+/* Styles go here */
+body {
+  margin: 0px;
+  background-color: #272727;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.loaderOverlay{
+  width:100%;
+  height:100%;
+  background-color:#272727;;
+  z-index:99;
+}
+
+.loaderContainer{
+  width: 100px;
+  height: 200px;
+   position:absolute; /*it can be fixed too*/
+   left:0; right:0;
+   top:0; bottom:0;
+   margin:auto;
+
+   /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:auto;
+}
+
+.loader {
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-bottom-color: blue;
+	position: relative;
+	top: -50px;
+	animation:loadertop 2s infinite EASE;
+	
+}
+.loader:after {
+	content: '';
+	position: absolute;
+	left: -50px;
+	top: 50px;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top-color: blue;
+	animation:loaderbottom 2s infinite Ease;
+}
+
+
+@keyframes loadertop {
+  0% {border-width:100px 50px 0 50px;}
+  50% {border-width:50px 50px 50px 50px;}
+  100% {border-width:100px 50px 0 50px;}
+}
+
+@keyframes loaderbottom {
+  0% {transform:translate(0px, -51px);
+    border-width:100px 50px -50px 50px;
+  }
+  50% {transform:translate(0px, -1px);
+    border-width:0px 50px 0 50px;
+  }
+  100% {transform:translate(0px, -51px);
+    border-width:100px 50px -50px 50px; 
+  }
+}
+
+.menu {
+    text-align: right;
+    display: block;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    padding-left:0px;
+}
+
+.menu li {
+  display: block;
+  position: relative;
+  border: solid #ffffff;
+  border-width: 0.8px 0.8px 0.8px 0;
+  margin-top:-1px;
+  width: 150px;
+}
+
+.menu li i {
+  padding:20px;
+  text-align: center;;
+}
+
+.menu li .fa {
+  font-size: 20px;
+  
+}
+
+.menuItem{
+  transition: transform  .5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-90px, 0);
+  color: #ffffff
+}
+
+.menuItem:hover{
+  transform: translate(0px, 0);
+}
+
+.menuItem a span{
+  transition: opacity .2s ease-in;
+  opacity: 0;
+  padding-right: 10px;
+  font-family: 'Karla', sans-serif;
+}
+
+.menuItem:hover a span{
+  opacity: 1;
+}
+
+#par0 {
+   background-image: url("http://i.imgur.com/bHPWU0K.png");
+   height: 1000px;
+}
+
+#par1 {
+   background-image: url("http://www.webdesigncrowd.com/demo/paperplane/img/mountains.png");
+   height: 1000px;
+}
+
+#par2 {
+  background-image: url("http://i.imgur.com/sTItIGz.png");
+  height: 1000px;
+}
+
+#par3 {
+  background-image: url("http://i.imgur.com/nVVeDXi.png");
+  height: 1000px;
+}
+
+.threeD{
+  background-position: bottom center;
+    background-size: auto 100%;
+    width: 100%;
+    height:300px;
+  position: absolute;
+  position: fixed;
+  background-repeat: no-repeat;
+}
+
+.main{
+  display: block;
+  position: relative;
+  height: 1000px;
+}
+
+.infoContainer{
+  background-color:#272727;
+  position:relative;
+}
+
+.info{
+      z-index: 10;
+    max-width: 1280px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: #272727;
+    color: #1e97c7;
+    font-family: 'Karla', sans-serif;
+    font-size: 34px;
+    
+}
+
+.infoTXT{
+  text-align: center;
+  margin-left:80px;
+  margin-right:80px;
+  margin-top: 100px; 
+  margin-bottom: 100px;
+}
+
+.smallText {
+  font-size: 19.2px;
+  width: 50%;
+  display: inline-block;
+  /*visibility:hidden*/ 
+}
+
+.infoIMG{
+  background-position: bottom center;
+  /*background-image: url("http://topcontentcenter.com/wp-content/uploads/2014/03/15790834_l.jpg");*/
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  margin-top: 100px; 
+  margin-bottom: 100px;
+}
+
+#info1{
+}
+#info2{
+  text-align: left;
+}
+#info3{
+  text-align: right;
+}
+
+#info3 .smallText{
+  text-align: left;
+}
+#info4{
+  text-align: left;
+}
+
+
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*FADE IN UP*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*FADE IN RIGHT*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+h1 {
+  margin-top:0px;
+}
+
+.fa {
+  font-size:50px;
+}
+
+.container {
+  padding: 50px 0 50px 5%;
+}
+
+.animationContainer{
+  display: inline-block;
+  overflow:hidden;
+  position: relative;
+  width:150px;
+  height:75px;
+
+}
+
+.squigle{
+  background-image: url(http://i.imgur.com/ZHPRYMx.png);
+  background-size: 50px 50px;
+  width:200px;
+  height:50px;
+  overflow:hidden;
+  position: relative;
+  background-repeat: Repeat-x;
+}
+
+#squigLeft{
+  -webkit-animation: bannermoveLeft 1s linear infinite;
+	        animation: bannermoveLeft 1s linear infinite;
+}
+
+#squigRight{
+  -webkit-animation: bannermoveRight 1s linear infinite;
+	        animation: bannermoveRight 1s linear infinite;
+}
+
+@keyframes "bannermoveLeft" {
+ 0% {
+    margin-left: -50px;
+ }
+ 100% {
+    margin-left: 0px;
+ }
+}
+
+@-webkit-keyframes "bannermoveLeft" {
+ 0% {
+    margin-left: -50px;
+ }
+ 100% {
+    margin-left: 0px;
+ }
+}
+ 
+ @keyframes "bannermoveRight" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -50px;
+ }
+}
+
+@-webkit-keyframes "bannermoveRight" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -50px;
+ }
+ }
+ 
+ /* Landscape phones and down */
+@media (max-width: 480px) {}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {}
+
