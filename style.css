@@ -120,6 +120,26 @@ body {
   opacity: 1;
 }
 
+.menuTop{
+  position: absolute;
+  z-index: 11;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  background-color:#272727;
+  color:#1e96c6;
+}
+
+.menuTop li {
+  display: inline-block;
+}
+
+.menuTop li a {
+  padding: 10px;
+}
+
 #par0 {
    background-image: url("http://i.imgur.com/bHPWU0K.png");
    height: 1000px;
@@ -178,10 +198,11 @@ body {
 
 .infoTXT{
   text-align: center;
-  margin-left:80px;
+  /*margin-left:80px;
   margin-right:80px;
-  margin-top: 100px; 
-  margin-bottom: 100px;
+  */
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .smallText {
@@ -196,11 +217,12 @@ body {
   /*background-image: url("http://topcontentcenter.com/wp-content/uploads/2014/03/15790834_l.jpg");*/
   background-size: auto 100%;
   background-repeat: no-repeat;
-  margin-top: 100px; 
-  margin-bottom: 100px;
+  margin-top: 150px; 
+  margin-bottom: 150px;
 }
 
 #info1{
+  text-align: right;
 }
 #info2{
   text-align: left;
@@ -261,8 +283,8 @@ body {
 @-webkit-keyframes fadeInRight {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
  
   to {
@@ -274,8 +296,8 @@ body {
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
  
   to {
@@ -288,6 +310,25 @@ body {
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+  
+  to {
+    opacity:0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
 }
 
 h1 {
