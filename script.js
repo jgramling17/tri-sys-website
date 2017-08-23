@@ -13,7 +13,6 @@ function executeParallax() {
   var menuBarSide = $('.menu');
   var menuBarTop = $('.menuTop');
     $(window).scroll(function(){
-      console.log(!menuBarSide.hasClass('hidden'));
       var topY = $(window).scrollTop();
         $('.threeD').each(function(){
           var $layer = $(this);

@@ -134,10 +134,26 @@ body {
 
 .menuTop li {
   display: inline-block;
+  float:right;
 }
 
 .menuTop li a {
   padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #1e97c7;
+}
+
+.menuTop li a:hover{
+  background-color:black;
+}
+
+strong {
+  font-weight: 100;
 }
 
 #par0 {
@@ -209,6 +225,7 @@ body {
   font-size: 19.2px;
   width: 50%;
   display: inline-block;
+  line-height: 1.5;
   /*visibility:hidden*/ 
 }
 
