@@ -1,16 +1,20 @@
 /* Styles go here */
 body {
   margin: 0px;
-  background-color: #272727;
+  background-color: #001d25;
 }
 
 .hidden {
   visibility: hidden;
 }
+
+.paged {
+display: none;
+}
 .loaderOverlay{
   width:100%;
   height:100%;
-  background-color:#272727;;
+  background-color:#001d25;;
   z-index:99;
 }
 
@@ -128,7 +132,7 @@ body {
   width: 100%;
   text-align: left;
   padding: 0;
-  background-color:#272727;
+  background-color:#001d25;
   color:#1e96c6;
 }
 
@@ -157,23 +161,37 @@ strong {
 }
 
 #par0 {
-   background-image: url("http://i.imgur.com/bHPWU0K.png");
-   height: 1000px;
+   background-image: url("../pictures/6.png");
+   height: 750px;
 }
 
 #par1 {
-   background-image: url("http://www.webdesigncrowd.com/demo/paperplane/img/mountains.png");
-   height: 1000px;
+   background-image: url("../pictures/5.png");
+   height: 750px;
 }
 
 #par2 {
-  background-image: url("http://i.imgur.com/sTItIGz.png");
-  height: 1000px;
+  background-image: url("../pictures/4.png");
+  height: 750px;
 }
 
 #par3 {
-  background-image: url("http://i.imgur.com/nVVeDXi.png");
+  background-image: url("../pictures/3.png");
+  height: 750px;
+}
+#par4 {
+  background-image: url("../pictures/2.png");
+  height: 750px;
+}
+#par5 {
+  background-image: url("../pictures/1.png");
   height: 1000px;
+  background-position: bottom center;
+  background-size: auto 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 60% 0%;
 }
 
 .threeD{
@@ -181,9 +199,9 @@ strong {
     background-size: auto 100%;
     width: 100%;
     height:300px;
-  position: absolute;
   position: fixed;
   background-repeat: no-repeat;
+  background-position: 60% 0%;
 }
 
 .main{
@@ -193,11 +211,11 @@ strong {
 }
 
 .infoContainer{
-  background-color:#272727;
+  background-color:#001d25;
   position:relative;
 }
 
-.info{
+.Home{
       z-index: 10;
     max-width: 1280px;
     padding-left: 30px;
@@ -205,11 +223,41 @@ strong {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    background-color: #272727;
+    background-color: #001d25;
     color: #1e97c7;
     font-family: 'Karla', sans-serif;
     font-size: 34px;
     
+}
+
+.Testimonials{
+  z-index: 10;
+max-width: 1280px;
+padding-left: 30px;
+padding-right: 30px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+background-color: #001d25;
+color: #1e97c7;
+font-family: 'Karla', sans-serif;
+font-size: 34px;
+
+}
+
+.About{
+  z-index: 10;
+max-width: 1280px;
+padding-left: 30px;
+padding-right: 30px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+background-color: #001d25;
+color: #1e97c7;
+font-family: 'Karla', sans-serif;
+font-size: 34px;
+
 }
 
 .infoTXT{

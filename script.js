@@ -1,15 +1,16 @@
 $(window).load(function(){
-    $('.main, .info').removeClass('hidden').addClass('fadeInUp animate');
+    $('.main, .Home').removeClass('hidden').addClass('fadeInUp animate');
     $('.loaderOverlay').css("display", "none");
 });
 
 $(document).ready(function(){
   executeParallax();
+  pageTransitions();
 });
 
 function executeParallax() {
   var i = 0;
-  var slides = ["#info1", "#info2", "#info3", "#info4"];
+  var homeSlides = ["#info1", "#info2", "#info3", "#info4"];
   var menuBarSide = $('.menu');
   var menuBarTop = $('.menuTop');
     $(window).scroll(function(){
@@ -24,9 +25,9 @@ function executeParallax() {
           } else if (topY < menuBarTop.height() && $('.loaderOverlay').css("display") === "none" && !menuBarSide.hasClass('hidden')){
           menuBarSide.removeClass('hidden fadeInRight').addClass('fadeOutUp');
         }
-        if(i<4 && topY >= $(slides[i]).position().top + 700){
+        if(i<4 && topY >= $(homeSlides[i]).position().top + 700){
           //var direction = $(this).attr('direction')
-          $(slides[i]).removeClass('hidden').addClass('fadeInUp animate');
+          $(homeSlides[i]).removeClass('hidden').addClass('fadeInUp animate');
           i++;
         }
     });
@@ -34,3 +35,36 @@ function executeParallax() {
       //$(this).css("transform", "translate(20px, 0)");
     //});
 }
+
+
+
+function pageTransitions() {
+  var pages = $(".menuTop").children().toArray();
+  $.each(pages, function(){
+    $(this).click(function(){
+      $.each(pages, function(){
+        if(!$($(this).attr('page')).hasClass("paged"))
+          {
+            $($(this).attr('page')).addClass("paged");
+          }
+      });
+      $($(this).attr('page')).removeClass("paged");
+      })
+  });
+  var sideBarPages = $(".menuItem").toArray();
+  $.each(sideBarPages, function(){
+    $(this).click(function(){
+      $.each(sideBarPages, function(){
+        if(!$($(this).attr('page')).hasClass("paged"))
+          {
+            $($(this).attr('page')).addClass("paged");
+            console.log($($(this).attr('page')));
+          }
+      });
+      $($(this).attr('page')).removeClass("paged");
+      })
+  });
+  
+}
+
+
