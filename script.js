@@ -25,7 +25,7 @@ function executeParallax() {
           } else if (topY < menuBarTop.height() && $('.loaderOverlay').css("display") === "none" && !menuBarSide.hasClass('hidden')){
           menuBarSide.removeClass('hidden fadeInRight').addClass('fadeOutUp');
         }
-        if(i<4 && topY >= $(homeSlides[i]).position().top + 700){
+        if(i<4 && topY >= $(homeSlides[i]).position().top + 600){
           //var direction = $(this).attr('direction')
           $(homeSlides[i]).removeClass('hidden').addClass('fadeInUp animate');
           i++;
@@ -48,7 +48,9 @@ function pageTransitions() {
             $($(this).attr('page')).addClass("paged");
           }
       });
-      $($(this).attr('page')).removeClass("paged");
+      $($(this).attr('page')).addClass("fadeInUp").removeClass("paged");
+      $('html,body').animate({scrollTop: $('#par5').offset().top + $('#par5').outerHeight(true) - 100});
+      console.log($('#par5').offset().top + $('#par5').outerHeight(true) - 100)
       })
   });
   var sideBarPages = $(".menuItem").toArray();
@@ -57,11 +59,10 @@ function pageTransitions() {
       $.each(sideBarPages, function(){
         if(!$($(this).attr('page')).hasClass("paged"))
           {
-            $($(this).attr('page')).addClass("paged");
-            console.log($($(this).attr('page')));
+            $($(this).attr('page')).removeClass("fadeInUp").addClass("paged");
           }
       });
-      $($(this).attr('page')).removeClass("paged");
+      $($(this).attr('page')).addClass("fadeInUp").removeClass("paged");
       })
   });
   

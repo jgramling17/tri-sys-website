@@ -9,7 +9,10 @@ body {
 }
 
 .paged {
-display: none;
+  position: absolute;
+  -webkit-animation-name: paged;
+  animation-name: paged;
+   
 }
 .loaderOverlay{
   width:100%;
@@ -111,6 +114,7 @@ display: none;
 
 .menuItem:hover{
   transform: translate(0px, 0);
+  cursor: pointer;
 }
 
 .menuItem a span{
@@ -216,47 +220,77 @@ strong {
 }
 
 .Home{
-      z-index: 10;
-    max-width: 1280px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    background-color: #001d25;
-    color: #1e97c7;
-    font-family: 'Karla', sans-serif;
-    font-size: 34px;
+  z-index: 10;
+  max-width: 1280px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #001d25;
+  color: #1e97c7;
+  font-family: 'Karla', sans-serif;
+  font-size: 34px;
     
 }
 
 .Testimonials{
   z-index: 10;
-max-width: 1280px;
-padding-left: 30px;
-padding-right: 30px;
-margin-left: auto;
-margin-right: auto;
-position: relative;
-background-color: #001d25;
-color: #1e97c7;
-font-family: 'Karla', sans-serif;
-font-size: 34px;
+  max-width: 1280px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #001d25;
+  color: #1e97c7;
+  font-family: 'Karla', sans-serif;
+  font-size: 34px;
 
 }
 
 .About{
   z-index: 10;
-max-width: 1280px;
-padding-left: 30px;
-padding-right: 30px;
-margin-left: auto;
-margin-right: auto;
-position: relative;
-background-color: #001d25;
-color: #1e97c7;
-font-family: 'Karla', sans-serif;
-font-size: 34px;
+  max-width: 1280px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #001d25;
+  color: #1e97c7;
+  font-family: 'Karla', sans-serif;
+  font-size: 34px;
+
+}
+
+.Products{
+  z-index: 10;
+  max-width: 1280px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #001d25;
+  color: #1e97c7;
+  font-family: 'Karla', sans-serif;
+  font-size: 34px;
+
+}
+
+.Contact{
+  z-index: 10;
+  max-width: 1280px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #001d25;
+  color: #1e97c7;
+  font-family: 'Karla', sans-serif;
+  font-size: 34px;
 
 }
 
@@ -309,6 +343,10 @@ font-size: 34px;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+.delayAnimate {
+  animation-delay: 1s;
 }
 
 /*FADE IN UP*/
@@ -394,6 +432,35 @@ font-size: 34px;
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
+}
+
+
+@keyframes paged {
+  from {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    position: inherit;
+  }
+  
+  to {
+    opacity:0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    position: absoloute;
+  }
+}
+
+.paged {
+  /*
+  position: absolute;
+  z-index: -9999;
+  visibility: hidden;
+  -webkit-animation-name: paged;
+  animation-name: paged;
+  */
+  display: none
+   
 }
 
 h1 {
