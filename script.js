@@ -25,9 +25,13 @@ function executeParallax() {
           } else if (topY < menuBarTop.height() && $('.loaderOverlay').css("display") === "none" && !menuBarSide.hasClass('hidden')){
           menuBarSide.removeClass('hidden fadeInRight').addClass('fadeOutUp');
         }
-        if(i<4 && topY >= $(homeSlides[i]).position().top + 600){
+        //if(i<4 && topY >= $(homeSlides[i]).position().top + 600){
+        if (i<4 && $(homeSlides[i]).offset().top <= topY + ($(window).height()/2)) {
           //var direction = $(this).attr('direction')
           $(homeSlides[i]).removeClass('hidden').addClass('fadeInUp animate');
+          if (i==homeSlides.length-1){
+            $("#spacer").addClass("shrink animate");
+          }
           i++;
         }
     });

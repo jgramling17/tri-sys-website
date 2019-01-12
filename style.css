@@ -344,6 +344,9 @@ div > h2:nth-child(3) > a:hover{
 #info4{
   text-align: left;
 }
+#spacer{
+  height: 50vh;
+}
 
 
 .animate {
@@ -440,6 +443,22 @@ div > h2:nth-child(3) > a:hover{
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
+}
+
+@keyframes shrink {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity:0;
+    height:0;
+  }
+}
+
+.shrink {
+  -webkit-animation-name: shrink;
+  animation-name: shrink;
 }
 
 
